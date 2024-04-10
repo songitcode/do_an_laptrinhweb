@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\CustomAutjController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('login', [HomeController::class, 'login'])->name('login');
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
